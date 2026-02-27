@@ -145,7 +145,6 @@ def main():
         for i, gear in enumerate(gears):
             gear.theta = (gear.theta + gear.vel) % (2 * math.pi)
             color = COLORS[i % len(COLORS)]
-            pygame.draw.rect(screen, (255, 255, 255), gear.hitbox(), 1)
             draw_gear(
                 screen, color, gear.pos, gear.r, gear.n, gear.theta, tooth_depth=8
             )
